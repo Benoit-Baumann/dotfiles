@@ -1,0 +1,35 @@
+[user]
+  name = Benoit Baumann
+  email = b.baumann@studio-hb.com
+[core]
+  editor = code -w
+  excludesfile = ~/.gitignore_global
+  autocrlf = input
+  ignorecase = false
+  untrackedCache = true
+  trustctime = false
+[pull]
+  rebase = true
+[merge]
+  ff = false
+[color]
+  ui = true
+[pager]
+  branch = false
+  diff = less -+FX
+[commit]
+  verbose = true
+[diff]
+  noprefix = true
+[protocol]
+  version = 2
+[alias]
+  # Serve local repo. http://coderwall.com/p/eybtga
+  # Then other can access via `git clone git://#{YOUR_IP_ADDRESS}/
+  serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
+
+  # Clean merged branches
+  sweep = !git branch --merged master | grep -v 'master$' | xargs git branch -d && git remote prune origin
+
+  # List contributors with number of commits
+  contributors = shortlog --summary --numbered

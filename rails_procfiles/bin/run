@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require 'socket'
+
+def system!(*args)
+  system(*args) || abort("\n== Command #{args} failed ==")
+end
+
+# ip = IPSocket.getaddress(Socket.gethostname)
+# puts "Address on wifi local network : http://#{ip}:3000"
+system! 'overmind start -f Procfile.dev'
