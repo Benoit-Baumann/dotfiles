@@ -38,11 +38,11 @@ alias f="open ."
 alias yh="yarn hot"
 alias yw="yarn watch"
 alias hostfile="sudo vim /etc/hosts"
-alias code="codium"
 alias yui="yarn upgrade-interactive --latest"
 alias please='sudo $(fc -ln -1)'
 alias ip="curl ipinfo.io/ip"
 alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
+alias code="codium"
 alias st='subl'
 
 # Flush Directory Service cache
