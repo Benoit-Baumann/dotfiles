@@ -86,6 +86,10 @@ alias mrubocop="git diff --name-only | xargs rubocop"
 alias rake="noglob rake"
 alias dbdev="bin/rails db:environment:set RAILS_ENV=development"
 
+# Overmind
+alias oc="overmind connect"
+alias ocs="overmind connect server"
+
 # Source zsh-autosuggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
