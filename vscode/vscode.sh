@@ -16,7 +16,6 @@ packages=(
   castwide.solargraph
   christian-kohler.npm-intellisense
   CoenraadS.bracket-pair-colorizer
-  CraigMaslowski.erb
   cssho.vscode-svgviewer
   dbaeumer.vscode-eslint
   DotJoshJohnson.xml
@@ -35,7 +34,6 @@ packages=(
   mrmlnc.vscode-apache
   ms-azuretools.vscode-docker
   ms-vsliveshare.vsliveshare
-  neilbrayfield.php-docblocker
   noku.rails-run-spec-vscode
   octref.vetur
   onecentlin.laravel-blade
@@ -60,8 +58,6 @@ packages=(
   Tyriar.sort-lines
   usernamehw.indent-one-space
   vscoss.vscode-ansible
-  wayou.vscode-todo-highlight
-  whatwedo.twig
   wingrunr21.vscode-ruby
   wmaurer.change-case
   yzhang.markdown-all-in-one

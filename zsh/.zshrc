@@ -22,13 +22,18 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # Add composer to PATH for scripting.
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+# Configure Homebrew completions (required for asdf)
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+  autoload -Uz compinit
+  compinit
+fi
 
+# Source Oh-my-ZSH
 source $ZSH/oh-my-zsh.sh
 
 # Global aliases
-alias zshconfig="open ~/.zshrc"
+alias zshconfig="code ~/.zshrc"
 alias cl="clear"
 alias meteo='curl -s "wttr.in/lyon?lang=fr"'
 alias cask="brew cask"
@@ -44,6 +49,8 @@ alias ip="curl ipinfo.io/ip"
 alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
 alias code="codium"
 alias st='subl'
+alias -g G=' | grep '
+alias cpssh='pbcopy < ~/.ssh/id_rsa.pub'
 
 # Flush Directory Service cache
 alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
@@ -60,6 +67,7 @@ alias wip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit
 alias go="git open"
 alias tigd="tig master..HEAD --first-parent --no-merges"
 alias gdc="git diff --cached"
+alias gdns="git diff --name-status"
 
 # Vagrant aliases
 alias vd="vagrant destroy"
@@ -89,12 +97,19 @@ alias dbdev="bin/rails db:environment:set RAILS_ENV=development"
 # Overmind
 alias oc="overmind connect"
 alias ocs="overmind connect server"
+alias br="bin/run"
+
+# Asdf
+alias ai="asdf install"
 
 # Source zsh-autosuggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Source zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Source ASDF
+. $(brew --prefix asdf)/asdf.sh
 
 autoload -U add-zsh-hook
 

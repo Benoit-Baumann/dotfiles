@@ -39,3 +39,10 @@ spec/test_files/
 .idea
 .rakeTasks
 .generators
+
+# ASDF
+.tool-versions
+
+# Others
+Procfile
+/bin/run
