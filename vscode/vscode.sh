@@ -6,16 +6,15 @@ ln -fs ~/dotfiles/vscode/snippets/ ~/Library/Application\ Support/VSCodium/User
 
 # Packages
 packages=(
-  alefragnani.project-manager
   atipugin.rails-partial
   bmewburn.vscode-intelephense-client
   bradlc.vscode-tailwindcss
   bung87.rails
   bung87.vscode-gemfile
-  bungcip.better-toml
   castwide.solargraph
   christian-kohler.npm-intellisense
   CoenraadS.bracket-pair-colorizer
+  connorshea.vscode-ruby-test-adapter
   cssho.vscode-svgviewer
   dbaeumer.vscode-eslint
   DotJoshJohnson.xml
@@ -23,43 +22,41 @@ packages=(
   formulahendry.auto-close-tag
   formulahendry.auto-rename-tag
   haaaad.ansible
+  hbenl.vscode-test-explorer
   HookyQR.beautify
   Hridoy.rails-snippets
   karunamurti.haml
-  marcostazi.VS-code-vagrantfile
   mechatroner.rainbow-csv
   mhmadhamster.postcss-language
   miguel-savignano.ruby-symbols
   mikestead.dotenv
-  mrmlnc.vscode-apache
+  misogi.ruby-rubocop
   ms-azuretools.vscode-docker
   ms-vsliveshare.vsliveshare
+  neilbrayfield.php-docblocker
   noku.rails-run-spec-vscode
   octref.vetur
-  onecentlin.laravel-blade
-  Orta.vscode-jest
   PKief.material-icon-theme
   pnp.polacode
   possan.nbsp-vscode
   rebornix.ruby
   redhat.vscode-yaml
   ritwickdey.LiveServer
-  robinbentley.sass-indented
   sdras.vue-vscode-snippets
+  Shan.code-settings-sync
   shanehofstetter.rails-i18n
   shanoor.vscode-nginx
   sianglim.slim
   sporto.rails-go-to-spec
-  steoates.autoimport
-  sysoev.language-stylus
+  syler.sass-indented
   timonwong.shellcheck
   TomasHubelbauer.vscode-markdown-table-format
   tomoki1207.pdf
   Tyriar.sort-lines
   usernamehw.indent-one-space
-  vscoss.vscode-ansible
   wingrunr21.vscode-ruby
   wmaurer.change-case
+  wwm.better-align
   yzhang.markdown-all-in-one
   zhuangtongfa.material-theme
   Zignd.html-css-class-completion

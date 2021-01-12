@@ -39,7 +39,7 @@ alias meteo='curl -s "wttr.in/lyon?lang=fr"'
 alias cask="brew cask"
 alias cat="ccat"
 alias mkdir="mkdir -p"
-alias f="open ."
+alias f="open"
 alias yh="yarn hot"
 alias yw="yarn watch"
 alias hostfile="sudo vim /etc/hosts"
@@ -47,17 +47,16 @@ alias yui="yarn upgrade-interactive --latest"
 alias please='sudo $(fc -ln -1)'
 alias ip="curl ipinfo.io/ip"
 alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
-alias code="codium"
 alias st='subl'
 alias -g G=' | grep '
 alias cpssh='pbcopy < ~/.ssh/id_rsa.pub'
+alias mc="mailcatcher && open http://127.0.0.1:1080/"
 
 # Flush Directory Service cache
 alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 
 # Git aliases
 alias gau="git add -u"
-alias gd.="git diff --color-words=."
 alias gst="clear && git status"
 alias gs="gst"
 alias gsu="clear && git status -u"
@@ -68,6 +67,7 @@ alias go="git open"
 alias tigd="tig master..HEAD --first-parent --no-merges"
 alias gdc="git diff --cached"
 alias gdns="git diff --name-status"
+alias gdm="git diff --color-moved"
 
 # Vagrant aliases
 alias vd="vagrant destroy"
@@ -87,8 +87,9 @@ alias yt="docker run --rm -u $(id -u):$(id -g) -v $PWD:/data vimagick/youtube-dl
 dbash() { docker exec -it "$1" /bin/bash; }
 
 # Rails aliases
-alias c="bundle exec rails c"
-alias s="bundle exec rails s"
+alias zs="zeus start"
+alias rc="bundle exec rails c"
+alias rs="bundle exec rails s"
 alias boe="bundle outdated --only-explicit"
 alias mrubocop="git diff --name-only | xargs rubocop"
 alias rake="noglob rake"

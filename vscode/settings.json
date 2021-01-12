@@ -87,7 +87,7 @@
         "**/vars/**/*.yml": "ansible",
         "**/inventory/*/*": "ansible",
         "*.yml": "yaml",
-        "*.sass": "css"
+        "*.sass": "sass"
     },
     "search.exclude": {
         "**/node_modules": true,
@@ -114,6 +114,12 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
-    "gitlens.mode.active": "zen",
-    "liveServer.settings.donotShowInfoMsg": true
+    "gitlens.mode.active": "review",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "gitlens.hovers.currentLine.over": "line",
+    "update.mode": "none",
+    "oneDarkPro.editorTheme": "oneDarkPro",
+    "rubyTestExplorer.logpanel": true,
+    "sync.autoUpload": true,
+    "sync.gist": "36a1fc813c209498a2f59955ddc2c754"
 }
