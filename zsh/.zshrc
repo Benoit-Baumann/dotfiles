@@ -33,7 +33,8 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 # Global aliases
-alias zshconfig="code ~/.zshrc"
+alias zshconfig="st ~/.zshrc"
+alias dtf="st ~/dotfiles"
 alias cl="clear"
 alias meteo='curl -s "wttr.in/lyon?lang=fr"'
 alias cask="brew cask"
@@ -51,6 +52,8 @@ alias st='subl'
 alias -g G=' | grep '
 alias cpssh='pbcopy < ~/.ssh/id_rsa.pub'
 alias mc="mailcatcher && open http://127.0.0.1:1080/"
+# kill runing rails server
+alias krs="kill -9 $(lsof -wni tcp:3000 | grep ruby | awk 'NR == 1 {print $2}')"
 
 # Flush Directory Service cache
 alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
