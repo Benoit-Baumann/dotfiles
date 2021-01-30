@@ -19,9 +19,6 @@ export HOMEBREW_NO_ANALYTICS=1
 # User configuration
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-# Add composer to PATH for scripting.
-export PATH="$PATH:$HOME/.composer/vendor/bin"
-
 # Configure Homebrew completions (required for asdf)
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
@@ -52,11 +49,6 @@ alias st='subl'
 alias -g G=' | grep '
 alias cpssh='pbcopy < ~/.ssh/id_rsa.pub'
 alias mc="mailcatcher && open http://127.0.0.1:1080/"
-# kill runing rails server
-alias krs="kill -9 $(lsof -wni tcp:3000 | grep ruby | awk 'NR == 1 {print $2}')"
-
-# Flush Directory Service cache
-alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 
 # Git aliases
 alias gau="git add -u"
@@ -71,14 +63,6 @@ alias tigd="tig master..HEAD --first-parent --no-merges"
 alias gdc="git diff --cached"
 alias gdns="git diff --name-status"
 alias gdm="git diff --color-moved"
-
-# Vagrant aliases
-alias vd="vagrant destroy"
-alias vgs="vagrant global-status"
-alias vh="vagrant halt"
-alias vp="vagrant provision"
-alias vs="vagrant status"
-alias vu="vagrant up"
 
 # Docker aliases
 alias dps="docker ps"
@@ -97,6 +81,8 @@ alias boe="bundle outdated --only-explicit"
 alias mrubocop="git diff --name-only | xargs rubocop"
 alias rake="noglob rake"
 alias dbdev="bin/rails db:environment:set RAILS_ENV=development"
+# kill runing rails server
+alias krs="kill -9 $(lsof -wni tcp:3000 | grep ruby | awk 'NR == 1 {print $2}')"
 
 # Overmind
 alias oc="overmind connect"
