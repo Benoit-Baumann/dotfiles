@@ -3,9 +3,11 @@ export LANG="en_US.UTF-8"
 export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export EDITOR="code -w"
-# export EDITOR="/Applications/Sublime Text.app/Contents/MacOS/Sublime Text"
 export DISABLE_SPRING=true
 export GATSBY_TELEMETRY_DISABLED=1
+export PGHOST="127.0.0.1"
+export PGPORT="5432"
+export PGUSER="postgres"
 
 ZSH_THEME="robbyrussell"
 DEFAULT_USER="$USER"
@@ -32,23 +34,19 @@ source $ZSH/oh-my-zsh.sh
 # Global aliases
 alias zshconfig="st ~/.zshrc"
 alias dtf="st ~/dotfiles"
-alias cl="clear"
 alias meteo='curl -s "wttr.in/lyon?lang=fr"'
-alias cask="brew cask"
 alias cat="ccat"
 alias mkdir="mkdir -p"
 alias f="open"
-alias yh="yarn hot"
-alias yw="yarn watch"
 alias hostfile="sudo vim /etc/hosts"
-alias yui="yarn upgrade-interactive --latest"
 alias please='sudo $(fc -ln -1)'
 alias ip="curl ipinfo.io/ip"
 alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
-alias st='subl'
 alias -g G=' | grep '
 alias cpssh='pbcopy < ~/.ssh/id_rsa.pub'
-alias mc="mailcatcher && open http://127.0.0.1:1080/"
+
+# SublimeText
+alias st='subl'
 
 # Git aliases
 alias gau="git add -u"
@@ -73,6 +71,11 @@ alias dcd="docker-compose down"
 alias yt="docker run --rm -u $(id -u):$(id -g) -v $PWD:/data vimagick/youtube-dl"
 dbash() { docker exec -it "$1" /bin/bash; }
 
+# Yarn
+alias yh="yarn hot"
+alias yw="yarn watch"
+alias yui="yarn upgrade-interactive --latest"
+
 # Rails aliases
 alias zs="zeus start"
 alias rc="bundle exec rails c"
@@ -83,6 +86,10 @@ alias rake="noglob rake"
 alias dbdev="bin/rails db:environment:set RAILS_ENV=development"
 # kill runing rails server
 alias krs="kill -9 $(lsof -wni tcp:3000 | grep ruby | awk 'NR == 1 {print $2}')"
+alias rrg='bundle exec rake routes | grep'
+
+# Mailcatcher
+alias mc="mailcatcher && open http://127.0.0.1:1080/"
 
 # Overmind
 alias oc="overmind connect"
